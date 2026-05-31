@@ -1,0 +1,97 @@
+/* ============================================================
+   billit — Motion layer
+   Restrained, fintech-grade micro-motion. transform/opacity only.
+   Everything is disabled under prefers-reduced-motion.
+   ============================================================ */
+
+/* ---------- Scroll reveal (JS adds .reveal then .in) ---------- */
+.reveal { opacity: 0; transform: translateY(16px); will-change: opacity, transform; }
+.reveal.in {
+  opacity: 1; transform: none;
+  transition: opacity .5s cubic-bezier(0.22,0.61,0.36,1),
+              transform .5s cubic-bezier(0.22,0.61,0.36,1);
+  transition-delay: calc(var(--i, 0) * 70ms);
+}
+
+/* ---------- Hover micro-lift — unified across content cards ---------- */
+.pain-card, .package-card, .step-card {
+  transition: transform .18s ease, box-shadow .18s ease;
+}
+.pain-card:hover, .package-card:hover, .step-card:hover {
+  transform: translateY(-4px); box-shadow: var(--shadow-md);
+}
+.why-card { transition: transform .18s ease; }
+.why-card:hover { transform: translateY(-4px); }
+.product-tile { transition: transform .18s ease; }
+.product-card:hover .product-tile { transform: translateY(-2px); }
+
+/* ---------- Hero first-load sequence ---------- */
+.hero-copy > * { opacity: 0; animation: riseIn .55s cubic-bezier(0.22,0.61,0.36,1) both; }
+.hero-copy > *:nth-child(1) { animation-delay: .08s; }
+.hero-copy > *:nth-child(2) { animation-delay: .16s; }
+.hero-copy > *:nth-child(3) { animation-delay: .26s; }
+.hero-copy > *:nth-child(4) { animation-delay: .36s; }
+.hero-copy > *:nth-child(5) { animation-delay: .46s; }
+.hero-visual .product-card { opacity: 0; animation: riseIn .6s cubic-bezier(0.22,0.61,0.36,1) .4s both; }
+
+/* Sub-page hero band — same staggered entrance */
+.page-hero .container > * { opacity: 0; animation: riseIn .55s cubic-bezier(0.22,0.61,0.36,1) both; }
+.page-hero .container > *:nth-child(1) { animation-delay: .06s; }
+.page-hero .container > *:nth-child(2) { animation-delay: .15s; }
+.page-hero .container > *:nth-child(3) { animation-delay: .25s; }
+.page-hero .container > *:nth-child(4) { animation-delay: .35s; }
+
+@keyframes riseIn {
+  from { opacity: 0; transform: translateY(18px); }
+  to   { opacity: 1; transform: none; }
+}
+
+/* ---------- Ambient: QR chip gentle float (entrance, then drift) ---------- */
+.qr-chip {
+  opacity: 0;
+  animation: riseIn .55s cubic-bezier(0.22,0.61,0.36,1) .62s both,
+             chipFloat 4s ease-in-out 1.3s infinite;
+}
+@keyframes chipFloat {
+  0%, 100% { transform: translateY(0); }
+  50%      { transform: translateY(-3px); }
+}
+
+/* ---------- Ambient: station map pin radar pulse ---------- */
+.map-pin .pin-dot { position: relative; box-shadow: 0 0 0 10px rgba(0,200,150,0.16); }
+.map-pin .pin-dot::after {
+  content: ""; position: absolute; inset: 0; border-radius: var(--radius-full);
+  background: rgba(0,200,150,0.30); z-index: -1;
+  animation: pinPulse 2.8s ease-out infinite;
+}
+@keyframes pinPulse {
+  0%   { transform: scale(1);   opacity: .6; }
+  70%  { opacity: 0; }
+  100% { transform: scale(2.4); opacity: 0; }
+}
+
+/* ---------- Steps: arrow gentle flow ---------- */
+.step-arrow .ic { animation: arrowNudge 2.4s ease-in-out infinite; }
+@keyframes arrowNudge {
+  0%, 100% { transform: translateX(0); opacity: .7; }
+  50%      { transform: translateX(4px); opacity: 1; }
+}
+
+/* ---------- FAQ: answer fades in with the chevron rotation ---------- */
+.faq-a-inner { opacity: 0; transition: opacity .3s ease; }
+.faq-item.is-open .faq-a-inner { opacity: 1; transition-delay: .12s; }
+
+/* ============================================================
+   Reduced motion — turn everything off, show final state instantly
+   ============================================================ */
+@media (prefers-reduced-motion: reduce) {
+  .reveal, .reveal.in { opacity: 1 !important; transform: none !important; transition: none !important; }
+  .hero-copy > *, .hero-visual .product-card, .qr-chip {
+    opacity: 1 !important; animation: none !important; transform: none !important;
+  }
+  .page-hero .container > * { opacity: 1 !important; animation: none !important; transform: none !important; }
+  .map-pin .pin-dot::after { animation: none !important; opacity: 0 !important; }
+  .step-arrow .ic { animation: none !important; transform: none !important; opacity: 1 !important; }
+  .pain-card, .package-card, .step-card, .why-card, .product-tile { transition: none !important; }
+  .faq-a-inner { transition: none !important; opacity: 1 !important; }
+}

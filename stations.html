@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>스테이션 안내 — billit</title>
+<link rel="stylesheet" href="assets/billit-tokens.css">
+<link rel="stylesheet" href="assets/site.css">
+<link rel="stylesheet" href="assets/motion.css">
+<script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
+</head>
+<body>
+
+<!-- ============== HEADER ============== -->
+<header class="site-header" id="siteHeader">
+  <div class="container header-inner">
+    <a class="header-logo" href="index.html" aria-label="billit 홈"><img src="assets/logo-wordmark.svg" alt="billit"></a>
+    <nav class="nav">
+      <a href="how.html">이용 방법</a>
+      <a href="index.html#package">빌릿패키지</a>
+      <a href="stations.html" aria-current="page">스테이션</a>
+      <a href="faq.html">요금·FAQ</a>
+    </nav>
+    <div class="header-actions">
+      <a class="btn btn--primary btn--sm" href="https://billit.co.kr" target="_blank" rel="noopener">
+        <i data-lucide="qr-code" class="ic"></i><span class="cta-label">지금 빌리기</span>
+      </a>
+      <button class="hamburger" id="hamburger" aria-label="메뉴 열기" aria-expanded="false">
+        <i data-lucide="menu" class="ic" style="width:24px;height:24px"></i>
+      </button>
+    </div>
+  </div>
+  <div class="mobile-nav" id="mobileNav">
+    <div class="container">
+      <a href="how.html">이용 방법<i data-lucide="chevron-right" class="ic"></i></a>
+      <a href="index.html#package">빌릿패키지<i data-lucide="chevron-right" class="ic"></i></a>
+      <a href="stations.html">스테이션<i data-lucide="chevron-right" class="ic"></i></a>
+      <a href="faq.html">요금·FAQ<i data-lucide="chevron-right" class="ic"></i></a>
+    </div>
+  </div>
+</header>
+
+<main>
+
+<!-- ============== PAGE HERO ============== -->
+<section class="page-hero">
+  <div class="container">
+    <div class="overline">STATIONS</div>
+    <h1>스테이션 안내</h1>
+    <p>지금은 건국대학교 상허기념도서관 한 곳에서 만날 수 있어요. 24시간 운영되는 무인 스테이션에서 언제든 빌려 쓰세요.</p>
+    <div class="breadcrumb">
+      <a href="index.html">홈</a><i data-lucide="chevron-right" class="ic"></i><span>스테이션</span>
+    </div>
+  </div>
+</section>
+
+<!-- ============== CURRENT STATION (dark card) ============== -->
+<section class="section">
+  <div class="container">
+    <div class="section-head section-head--center">
+      <div class="overline">NOW OPEN</div>
+      <h2 class="section-title">지금 만날 수 있는 거점</h2>
+      <p class="section-sub">건국대학교 캠퍼스에서 먼저 시작했어요.</p>
+    </div>
+    <div class="station-hero-card">
+      <div class="map-ph">
+        <div class="map-blocks"><i></i><i></i><i></i><i></i><i></i></div>
+        <div class="map-pin">
+          <span class="pin-dot"><i data-lucide="map-pin" class="ic"></i></span>
+          <span class="pin-label">상허기념도서관</span>
+        </div>
+      </div>
+      <div class="station-hero-meta">
+        <div>
+          <h3>건국대학교 상허기념도서관</h3>
+          <p>건국대학교 서울캠퍼스 · 도서관 내 무인 스테이션</p>
+        </div>
+        <div class="station-hero-badges">
+          <span class="badge badge--solid"><i data-lucide="clock" class="ic" style="width:13px;height:13px"></i>24시간 운영</span>
+          <span class="badge badge--success"><span class="dot"></span>운영 중</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============== LOCATION / TIME FEATURES ============== -->
+<section class="section package-section">
+  <div class="container">
+    <div class="section-head section-head--center">
+      <div class="overline">GOOD TO KNOW</div>
+      <h2 class="section-title">이용 위치와 시간</h2>
+      <p class="section-sub">방문 전 알아두면 좋은 정보예요.</p>
+    </div>
+    <div class="loc-feats">
+      <div class="loc-feat">
+        <span class="loc-ic"><i data-lucide="building-2" class="ic"></i></span>
+        <div>
+          <h4>도서관 내 무인 스테이션</h4>
+          <p>상허기념도서관 안에 설치돼 있어요. 정확한 위치가 헷갈리면 도서관 안내데스크나 서비스 앱에서 확인하세요.</p>
+        </div>
+      </div>
+      <div class="loc-feat">
+        <span class="loc-ic"><i data-lucide="clock" class="ic"></i></span>
+        <div>
+          <h4>24시간 이용 가능</h4>
+          <p>운영 시간에 제약이 없어요. 밤샘 과제도, 이른 아침 수업 준비도 언제든 빌려 쓸 수 있어요.</p>
+        </div>
+      </div>
+      <div class="loc-feat">
+        <span class="loc-ic"><i data-lucide="scan-line" class="ic"></i></span>
+        <div>
+          <h4>QR 한 번에 즉시 대여</h4>
+          <p>스테이션의 QR 코드를 스캔하면 바로 대여돼요. 앱 설치나 복잡한 절차 없이 시작할 수 있어요.</p>
+        </div>
+      </div>
+      <div class="loc-feat">
+        <span class="loc-ic"><i data-lucide="user-check" class="ic"></i></span>
+        <div>
+          <h4>무인 셀프 이용</h4>
+          <p>직원을 기다릴 필요 없이 스스로 빌리고 반납해요. 반납은 빌렸던 스테이션에 그대로 하면 돼요.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============== EXPANSION / REQUEST ============== -->
+<section class="section">
+  <div class="container">
+    <div class="section-head section-head--center">
+      <div class="overline">COMING SOON</div>
+      <h2 class="section-title">거점은 계속 늘어나요</h2>
+      <p class="section-sub">더 많은 캠퍼스에서 빌릿을 만날 수 있도록 준비하고 있어요.</p>
+    </div>
+    <div class="expand-card">
+      <div class="expand-ic"><i data-lucide="map-pinned" class="ic"></i></div>
+      <h3>우리 학교에도 빌릿을</h3>
+      <p>추가 거점은 순차적으로 공개될 예정이에요. 우리 학교에도 스테이션 설치를 원한다면 서비스 앱을 통해 알려주세요.</p>
+      <a class="btn btn--primary btn--md" href="https://billit.co.kr" target="_blank" rel="noopener">
+        <i data-lucide="external-link" class="ic"></i>설치 요청·문의하기
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ============== CLOSING CTA ============== -->
+<section class="section--tight cta-band">
+  <div class="container">
+    <img class="cta-mark" src="assets/app-mark.svg" alt="billit">
+    <h2>지금 가까운 스테이션에서<br>빌려보세요</h2>
+    <p>도서관·카페·강의실 어디서든, 필요한 순간 바로 빌려 쓰세요.</p>
+    <div class="cta-actions">
+      <a class="btn btn--dark btn--lg" href="https://billit.co.kr" target="_blank" rel="noopener">
+        <i data-lucide="qr-code" class="ic"></i>지금 빌리기
+      </a>
+      <a class="btn btn--ghost btn--lg" href="how.html">이용 방법 보기</a>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- ============== FOOTER ============== -->
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <img src="assets/logo-wordmark-white.svg" alt="billit">
+        <p>빌릿은 프렌즈(PRIENZ)가 운영하는 캠퍼스 무인 대여 서비스입니다. 필요한 순간, 캠퍼스에서 바로 빌려 쓰세요.</p>
+      </div>
+      <div class="footer-col">
+        <h4>서비스</h4>
+        <ul>
+          <li><a href="how.html">이용 방법</a></li>
+          <li><a href="index.html#package">빌릿패키지</a></li>
+          <li><a href="stations.html">스테이션</a></li>
+          <li><a href="faq.html">요금·FAQ</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>안내</h4>
+        <ul>
+          <li><a href="https://billit.co.kr" target="_blank" rel="noopener">서비스 앱 바로가기</a></li>
+          <li><a href="#">이용약관</a></li>
+          <li><a href="#">개인정보처리방침</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="biz">
+        <strong>프렌즈 (PRIENZ)</strong><br>
+        대표 ｜ 준비 중 · 사업자등록번호 ｜ 준비 중 · 주소 ｜ 준비 중 · 문의 ｜ 준비 중
+      </div>
+      <div class="copy">© 2026 PRIENZ. All rights reserved.</div>
+    </div>
+  </div>
+</footer>
+
+<script src="assets/site.js"></script>
+</body>
+</html>

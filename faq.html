@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>요금·FAQ — billit</title>
+<link rel="stylesheet" href="assets/billit-tokens.css">
+<link rel="stylesheet" href="assets/site.css">
+<link rel="stylesheet" href="assets/motion.css">
+<script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
+</head>
+<body>
+
+<!-- ============== HEADER ============== -->
+<header class="site-header" id="siteHeader">
+  <div class="container header-inner">
+    <a class="header-logo" href="index.html" aria-label="billit 홈"><img src="assets/logo-wordmark.svg" alt="billit"></a>
+    <nav class="nav">
+      <a href="how.html">이용 방법</a>
+      <a href="index.html#package">빌릿패키지</a>
+      <a href="stations.html">스테이션</a>
+      <a href="faq.html" aria-current="page">요금·FAQ</a>
+    </nav>
+    <div class="header-actions">
+      <a class="btn btn--primary btn--sm" href="https://billit.co.kr" target="_blank" rel="noopener">
+        <i data-lucide="qr-code" class="ic"></i><span class="cta-label">지금 빌리기</span>
+      </a>
+      <button class="hamburger" id="hamburger" aria-label="메뉴 열기" aria-expanded="false">
+        <i data-lucide="menu" class="ic" style="width:24px;height:24px"></i>
+      </button>
+    </div>
+  </div>
+  <div class="mobile-nav" id="mobileNav">
+    <div class="container">
+      <a href="how.html">이용 방법<i data-lucide="chevron-right" class="ic"></i></a>
+      <a href="index.html#package">빌릿패키지<i data-lucide="chevron-right" class="ic"></i></a>
+      <a href="stations.html">스테이션<i data-lucide="chevron-right" class="ic"></i></a>
+      <a href="faq.html">요금·FAQ<i data-lucide="chevron-right" class="ic"></i></a>
+    </div>
+  </div>
+</header>
+
+<main>
+
+<!-- ============== PAGE HERO ============== -->
+<section class="page-hero">
+  <div class="container">
+    <div class="overline">PRICING &amp; FAQ</div>
+    <h1>요금·자주 묻는 질문</h1>
+    <p>요금 정책은 아직 준비 중이에요. 대여·반납부터 구성·문제 상황까지, 자주 묻는 질문을 사실 그대로 모았어요.</p>
+    <div class="breadcrumb">
+      <a href="index.html">홈</a><i data-lucide="chevron-right" class="ic"></i><span>요금·FAQ</span>
+    </div>
+  </div>
+</section>
+
+<!-- ============== PRICING (준비 중) ============== -->
+<section class="section">
+  <div class="container">
+    <div class="section-head section-head--center">
+      <div class="overline">PRICING</div>
+      <h2 class="section-title">요금 안내</h2>
+      <p class="section-sub">정확한 요금과 대여 시간 한도는 확정되는 대로 가장 먼저 안내드릴게요.</p>
+    </div>
+    <div class="price-card">
+      <div class="price-ic"><i data-lucide="receipt" class="ic"></i></div>
+      <span class="badge badge--brand price-badge"><span class="dot"></span>준비 중</span>
+      <h3>요금 정책 준비 중</h3>
+      <p>요금과 대여 시간 한도는 아직 확정되지 않았어요. 확정되는 대로 이 페이지와 서비스 앱에서 가장 먼저 안내드릴게요.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============== FAQ (categorized) ============== -->
+<section class="section package-section" id="faq">
+  <div class="container">
+    <div class="section-head section-head--center">
+      <div class="overline">FAQ</div>
+      <h2 class="section-title">자주 묻는 질문</h2>
+      <p class="section-sub">궁금한 점을 카테고리별로 모았어요.</p>
+    </div>
+
+    <!-- 대여/반납 -->
+    <div class="faq-cat">
+      <div class="faq-cat-head"><i data-lucide="repeat" class="ic"></i>대여·반납</div>
+      <div class="faq-wrap">
+        <div class="faq-item is-open">
+          <button class="faq-q" aria-expanded="true">어디에서 빌릴 수 있나요?<span class="chev"><i data-lucide="chevron-down" class="ic"></i></span></button>
+          <div class="faq-a"><div class="faq-a-inner">현재 건국대학교 상허기념도서관에 설치된 무인 스테이션에서 24시간 이용할 수 있어요. 추가 거점은 순차적으로 안내해 드릴게요.</div></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q" aria-expanded="false">어떻게 빌리나요?<span class="chev"><i data-lucide="chevron-down" class="ic"></i></span></button>
+          <div class="faq-a"><div class="faq-a-inner">스테이션에 부착된 QR 코드를 폰으로 스캔하면 빌릿패키지가 바로 대여돼요. 앱 설치나 복잡한 가입 절차 없이 시작할 수 있어요.</div></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q" aria-expanded="false">반납은 어떻게 하나요?<span class="chev"><i data-lucide="chevron-down" class="ic"></i></span></button>
+          <div class="faq-a"><div class="faq-a-inner">다 쓰신 뒤 빌렸던 스테이션에 빌릿패키지를 그대로 반납하면 끝이에요. 별도의 절차 없이 간편하게 마무리돼요.</div></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q" aria-expanded="false">여러 개를 동시에 빌릴 수 있나요?<span class="chev"><i data-lucide="chevron-down" class="ic"></i></span></button>
+          <div class="faq-a"><div class="faq-a-inner">동시 대여 관련 정책은 준비 중이에요. 스테이션의 빌릿패키지 재고 상황에 따라 달라질 수 있어요.</div></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 구성/상태 -->
+    <div class="faq-cat">
+      <div class="faq-cat-head"><i data-lucide="package" class="ic"></i>구성·상태</div>
+      <div class="faq-wrap">
+        <div class="faq-item">
+          <button class="faq-q" aria-expanded="false">빌릿패키지에는 무엇이 들어 있나요?<span class="chev"><i data-lucide="chevron-down" class="ic"></i></span></button>
+          <div class="faq-a"><div class="faq-a-inner">노트북 충전기, 노트북 거치대, 무선마우스로 구성돼 있어요. 노트북 작업에 꼭 필요한 세 가지예요.</div></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q" aria-expanded="false">구성품이 달라질 수도 있나요?<span class="chev"><i data-lucide="chevron-down" class="ic"></i></span></button>
+          <div class="faq-a"><div class="faq-a-inner">구성품은 스테이션 상황에 따라 달라질 수 있어요. 대여 전 스테이션 화면이나 앱에서 구성을 확인하세요.</div></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q" aria-expanded="false">기기 상태는 괜찮나요?<span class="chev"><i data-lucide="chevron-down" class="ic"></i></span></button>
+          <div class="faq-a"><div class="faq-a-inner">사용에 문제가 없도록 관리하고 있어요. 혹시 이상이 있으면 문의해 주세요 — 문의 채널은 준비 중이며 앱에서도 안내를 확인할 수 있어요.</div></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 이용시간/요금 -->
+    <div class="faq-cat">
+      <div class="faq-cat-head"><i data-lucide="clock" class="ic"></i>이용 시간·요금</div>
+      <div class="faq-wrap">
+        <div class="faq-item">
+          <button class="faq-q" aria-expanded="false">이용 시간은 어떻게 되나요?<span class="chev"><i data-lucide="chevron-down" class="ic"></i></span></button>
+          <div class="faq-a"><div class="faq-a-inner">현재 거점인 상허기념도서관 스테이션은 24시간 운영돼요. 밤샘 과제도, 이른 아침 준비도 시간에 구애받지 않아요.</div></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q" aria-expanded="false">요금과 대여 시간 한도는 얼마인가요?<span class="chev"><i data-lucide="chevron-down" class="ic"></i></span></button>
+          <div class="faq-a"><div class="faq-a-inner">요금과 대여 시간 한도는 준비 중이에요. 확정되는 대로 이 페이지와 서비스 앱에서 가장 먼저 안내드릴게요.</div></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 문제 상황 -->
+    <div class="faq-cat">
+      <div class="faq-cat-head"><i data-lucide="life-buoy" class="ic"></i>문제 상황</div>
+      <div class="faq-wrap">
+        <div class="faq-item">
+          <button class="faq-q" aria-expanded="false">분실하거나 파손했을 때는요?<span class="chev"><i data-lucide="chevron-down" class="ic"></i></span></button>
+          <div class="faq-a"><div class="faq-a-inner">분실이나 파손이 생기면 당황하지 말고 문의해 주세요. 문의 채널은 준비 중이며, 서비스 앱에서도 안내를 확인할 수 있어요.</div></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q" aria-expanded="false">기기가 오작동하면 어떻게 하나요?<span class="chev"><i data-lucide="chevron-down" class="ic"></i></span></button>
+          <div class="faq-a"><div class="faq-a-inner">사용 중 문제가 생기면 서비스 앱을 통해 문의해 주세요. 빠르게 도와드릴 수 있도록 안내를 준비하고 있어요.</div></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 운영 -->
+    <div class="faq-cat">
+      <div class="faq-cat-head"><i data-lucide="building-2" class="ic"></i>운영</div>
+      <div class="faq-wrap">
+        <div class="faq-item">
+          <button class="faq-q" aria-expanded="false">billit은 누가 운영하나요?<span class="chev"><i data-lucide="chevron-down" class="ic"></i></span></button>
+          <div class="faq-a"><div class="faq-a-inner">빌릿은 프렌즈(PRIENZ)가 운영하는 캠퍼스 무인 대여 서비스예요.</div></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 문의 안내 -->
+    <div class="contact-card">
+      <h3>더 궁금한 점이 있나요?</h3>
+      <p>여기에서 답을 찾지 못했다면 서비스 앱에서 확인해 주세요. 별도 문의 채널은 준비 중이에요.</p>
+      <div class="contact-actions">
+        <a class="btn btn--primary btn--md" href="https://billit.co.kr" target="_blank" rel="noopener">
+          <i data-lucide="external-link" class="ic"></i>서비스 앱에서 확인
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============== CLOSING CTA ============== -->
+<section class="section--tight cta-band">
+  <div class="container">
+    <img class="cta-mark" src="assets/app-mark.svg" alt="billit">
+    <h2>지금 가까운 스테이션에서<br>빌려보세요</h2>
+    <p>도서관·카페·강의실 어디서든, 필요한 순간 바로 빌려 쓰세요.</p>
+    <div class="cta-actions">
+      <a class="btn btn--dark btn--lg" href="https://billit.co.kr" target="_blank" rel="noopener">
+        <i data-lucide="qr-code" class="ic"></i>지금 빌리기
+      </a>
+      <a class="btn btn--ghost btn--lg" href="how.html">이용 방법 보기</a>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- ============== FOOTER ============== -->
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <img src="assets/logo-wordmark-white.svg" alt="billit">
+        <p>빌릿은 프렌즈(PRIENZ)가 운영하는 캠퍼스 무인 대여 서비스입니다. 필요한 순간, 캠퍼스에서 바로 빌려 쓰세요.</p>
+      </div>
+      <div class="footer-col">
+        <h4>서비스</h4>
+        <ul>
+          <li><a href="how.html">이용 방법</a></li>
+          <li><a href="index.html#package">빌릿패키지</a></li>
+          <li><a href="stations.html">스테이션</a></li>
+          <li><a href="faq.html">요금·FAQ</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>안내</h4>
+        <ul>
+          <li><a href="https://billit.co.kr" target="_blank" rel="noopener">서비스 앱 바로가기</a></li>
+          <li><a href="#">이용약관</a></li>
+          <li><a href="#">개인정보처리방침</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="biz">
+        <strong>프렌즈 (PRIENZ)</strong><br>
+        대표 ｜ 준비 중 · 사업자등록번호 ｜ 준비 중 · 주소 ｜ 준비 중 · 문의 ｜ 준비 중
+      </div>
+      <div class="copy">© 2026 PRIENZ. All rights reserved.</div>
+    </div>
+  </div>
+</footer>
+
+<script src="assets/site.js"></script>
+</body>
+</html>

@@ -1,0 +1,271 @@
+/* ============================================================
+   billit — Color & Type Foundation
+   The single source of truth for design tokens (plain CSS).
+   For the Tailwind 4 implementation, see global.css (@theme).
+   ============================================================ */
+
+/* ---- Pretendard (Korean + Latin). Loaded from CDN. ---- */
+/* If you have the licensed local font files, drop them in fonts/
+   and replace this import with @font-face declarations.        */
+@import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.css");
+
+:root {
+  /* ========================================================
+     1. BRAND — billit green (emerald mint)
+     billit-500 (#00C896) is the canonical brand color.
+     Scale tuned for AA contrast at 600+ on white.
+     ======================================================== */
+  --billit-50:  #E7FBF4;
+  --billit-100: #C3F4E3;
+  --billit-200: #8AE9CB;
+  --billit-300: #4ED9AE;
+  --billit-400: #1ECF9C;
+  --billit-500: #00C896; /* ← MAIN brand color */
+  --billit-600: #00A87E;
+  --billit-700: #008865;
+  --billit-800: #006A4F;
+  --billit-900: #004C39;
+
+  /* ========================================================
+     2. NEUTRALS — cool gray scale (Toss-like)
+     gray-50 doubles as the default page background.
+     ======================================================== */
+  --gray-50:  #F9FAFB; /* ← page background */
+  --gray-100: #F2F4F6;
+  --gray-200: #E5E8EB;
+  --gray-300: #D1D6DB;
+  --gray-400: #B0B8C1;
+  --gray-500: #8B95A1;
+  --gray-600: #6B7684;
+  --gray-700: #4E5968;
+  --gray-800: #333D4B;
+  --gray-900: #191F28; /* darkest body text */
+
+  /* ========================================================
+     3. SEMANTIC — status / feedback
+     Brand green is reserved for the brand; success uses a
+     distinct, slightly cooler green to avoid confusion.
+     ======================================================== */
+  --success:     #15B886;
+  --success-bg:  #E7F8F1;
+  --success-fg:  #0E7A5A;
+
+  --info:        #3182F6; /* Toss-style action blue, for links/info */
+  --info-bg:     #E8F1FE;
+  --info-fg:     #1B64DA;
+
+  --warning:     #FF9500;
+  --warning-bg:  #FFF3E0;
+  --warning-fg:  #B86E00;
+
+  --danger:      #F04452;
+  --danger-bg:   #FDECEE;
+  --danger-fg:   #C32A38;
+
+  /* ========================================================
+     4. DARK SECTION SURFACES
+     Green-tinted charcoals for dark marketing sections / footer.
+     ======================================================== */
+  --dark-900: #0B1813; /* deepest — section base */
+  --dark-800: #122620;
+  --dark-700: #1B342C;
+  --dark-600: #25453B;
+  --dark-on:  #F2F4F6;  /* primary text on dark */
+  --dark-on-muted: #9AA8A1; /* secondary text on dark */
+
+  /* ========================================================
+     5. SEMANTIC SURFACE / TEXT ALIASES
+     Use these in components, not raw scale values.
+     ======================================================== */
+  --bg-page:        var(--gray-50);
+  --bg-surface:     #FFFFFF;
+  --bg-surface-alt: var(--gray-100);
+  --bg-brand:       var(--billit-500);
+  /* Text-bearing green surfaces use this AA-safe darker green
+     (white text → 5.3:1). Reserve --billit-500 for non-text fills:
+     hero gradient, icons, overlines, dots. */
+  --bg-brand-strong:#007A5A;
+  --bg-brand-subtle:var(--billit-50);
+
+  --fg-strong:  var(--gray-900); /* headings */
+  --fg-default: var(--gray-800); /* body */
+  --fg-muted:   var(--gray-600); /* secondary */
+  --fg-subtle:  var(--gray-500); /* captions, placeholder */
+  --fg-on-brand:#FFFFFF;
+  --fg-brand:   var(--billit-700); /* brand text on light bg (AA) */
+
+  --border-default: var(--gray-200);
+  --border-strong:  var(--gray-300);
+  --border-brand:   var(--billit-500);
+
+  /* ========================================================
+     6. TYPOGRAPHY — Pretendard
+     ======================================================== */
+  --font-sans: "Pretendard Variable", Pretendard, -apple-system,
+    BlinkMacSystemFont, "Apple SD Gothic Neo", system-ui, Roboto,
+    "Helvetica Neue", "Segoe UI", "Malgun Gothic", sans-serif;
+
+  /* Weights */
+  --fw-regular:  400;
+  --fw-medium:   500;
+  --fw-semibold: 600;
+  --fw-bold:     700;
+  --fw-extrabold:800;
+
+  /* Type scale (mobile-first, px) */
+  --fs-display: 36px; /* hero — bumps to 48–56px on desktop */
+  --fs-h1: 28px;
+  --fs-h2: 24px;
+  --fs-h3: 20px;
+  --fs-h4: 18px;
+  --fs-body-lg: 17px;
+  --fs-body: 16px;
+  --fs-body-sm: 15px;
+  --fs-label: 14px;
+  --fs-caption: 13px;
+  --fs-overline: 12px;
+
+  /* Line heights — Korean reads better with generous leading */
+  --lh-tight: 1.25;   /* display / big headings */
+  --lh-snug: 1.35;    /* headings */
+  --lh-normal: 1.6;   /* body */
+  --lh-relaxed: 1.75; /* long-form body */
+
+  /* Letter spacing — slight negative tracking on big Korean type */
+  --ls-tight: -0.03em;
+  --ls-snug: -0.02em;
+  --ls-normal: -0.01em;
+  --ls-wide: 0.04em; /* overlines / all-caps latin */
+
+  /* ========================================================
+     7. RADIUS — generous, friendly rounding
+     ======================================================== */
+  --radius-xs: 6px;
+  --radius-sm: 8px;
+  --radius-md: 12px;  /* default control radius (buttons, inputs) */
+  --radius-lg: 16px;  /* cards */
+  --radius-xl: 20px;  /* large cards / sheets */
+  --radius-2xl: 28px; /* hero panels */
+  --radius-full: 9999px;
+
+  /* ========================================================
+     8. SHADOWS — soft, low-contrast elevation
+     ======================================================== */
+  --shadow-xs: 0 1px 2px rgba(23, 31, 40, 0.05);
+  --shadow-sm: 0 2px 8px rgba(23, 31, 40, 0.06);
+  --shadow-md: 0 6px 20px rgba(23, 31, 40, 0.08);
+  --shadow-lg: 0 12px 32px rgba(23, 31, 40, 0.10);
+  --shadow-brand: 0 8px 24px rgba(0, 200, 150, 0.28);
+
+  /* ========================================================
+     9. SPACING — 4px base scale
+     ======================================================== */
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 20px;
+  --space-6: 24px;
+  --space-8: 32px;
+  --space-10: 40px;
+  --space-12: 48px;
+  --space-16: 64px;
+  --space-20: 80px;
+  --space-24: 96px;
+
+  /* Layout */
+  --container-max: 1120px;   /* desktop content cap */
+  --container-mobile: 420px; /* mobile-first column */
+  --section-y: 80px;         /* vertical rhythm between sections */
+}
+
+/* ============================================================
+   SEMANTIC TYPE CLASSES
+   Apply directly, or copy the rules into your framework.
+   ============================================================ */
+.ds-display {
+  font-family: var(--font-sans);
+  font-size: var(--fs-display);
+  font-weight: var(--fw-extrabold);
+  line-height: var(--lh-tight);
+  letter-spacing: var(--ls-tight);
+  color: var(--fg-strong);
+}
+.ds-h1 {
+  font-family: var(--font-sans);
+  font-size: var(--fs-h1);
+  font-weight: var(--fw-bold);
+  line-height: var(--lh-snug);
+  letter-spacing: var(--ls-snug);
+  color: var(--fg-strong);
+}
+.ds-h2 {
+  font-family: var(--font-sans);
+  font-size: var(--fs-h2);
+  font-weight: var(--fw-bold);
+  line-height: var(--lh-snug);
+  letter-spacing: var(--ls-snug);
+  color: var(--fg-strong);
+}
+.ds-h3 {
+  font-family: var(--font-sans);
+  font-size: var(--fs-h3);
+  font-weight: var(--fw-semibold);
+  line-height: var(--lh-snug);
+  letter-spacing: var(--ls-normal);
+  color: var(--fg-strong);
+}
+.ds-h4 {
+  font-family: var(--font-sans);
+  font-size: var(--fs-h4);
+  font-weight: var(--fw-semibold);
+  line-height: var(--lh-snug);
+  letter-spacing: var(--ls-normal);
+  color: var(--fg-strong);
+}
+.ds-body-lg {
+  font-family: var(--font-sans);
+  font-size: var(--fs-body-lg);
+  font-weight: var(--fw-regular);
+  line-height: var(--lh-normal);
+  letter-spacing: var(--ls-normal);
+  color: var(--fg-default);
+}
+.ds-body {
+  font-family: var(--font-sans);
+  font-size: var(--fs-body);
+  font-weight: var(--fw-regular);
+  line-height: var(--lh-normal);
+  letter-spacing: var(--ls-normal);
+  color: var(--fg-default);
+}
+.ds-body-sm {
+  font-family: var(--font-sans);
+  font-size: var(--fs-body-sm);
+  font-weight: var(--fw-regular);
+  line-height: var(--lh-normal);
+  color: var(--fg-muted);
+}
+.ds-label {
+  font-family: var(--font-sans);
+  font-size: var(--fs-label);
+  font-weight: var(--fw-medium);
+  line-height: var(--lh-snug);
+  color: var(--fg-default);
+}
+.ds-caption {
+  font-family: var(--font-sans);
+  font-size: var(--fs-caption);
+  font-weight: var(--fw-regular);
+  line-height: var(--lh-snug);
+  color: var(--fg-subtle);
+}
+.ds-overline {
+  font-family: var(--font-sans);
+  font-size: var(--fs-overline);
+  font-weight: var(--fw-bold);
+  line-height: 1.2;
+  letter-spacing: var(--ls-wide);
+  text-transform: uppercase;
+  color: var(--fg-brand);
+}
