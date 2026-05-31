@@ -31,13 +31,18 @@ billit-website/
 ├── how.html            # 이용 방법 상세
 ├── stations.html       # 스테이션 거점 안내
 ├── faq.html            # 요금·FAQ
+├── terms.html          # 이용약관 (billit-frontend에서 가져옴, noindex)
+├── privacy.html        # 개인정보처리방침 (noindex)
+├── favicon.ico / favicon.svg   # 파비콘 (billit-frontend에서 가져옴, 데스크탑/웹 전용)
 ├── assets/
 │   ├── billit-tokens.css   # 디자인 토큰 단일 소스 (색/타이포/간격/그림자) — DESIGN.md 참조
-│   ├── site.css            # 컴포넌트 스타일 (725줄)
+│   ├── site.css            # 컴포넌트 스타일
 │   ├── motion.css          # 스크롤 리빌 애니메이션
 │   ├── site.js             # 헤더 스크롤 / 모바일 메뉴 / FAQ 아코디언 / 스크롤 리빌
 │   ├── logo-wordmark.svg / logo-wordmark-white.svg / app-mark.svg
-└── screenshots/        # 디자인 검수용 캡처 (커밋 대상 아님 — 필요 시 .gitignore 후보)
+│   ├── ku-location.png     # 스테이션 위치 지도 이미지 (index·stations 카드)
+│   └── og-image.png        # OG 공유 카드 이미지 (1200×630)
+└── screenshots/        # 디자인 검수용 캡처 (.gitignore 처리됨, 커밋 대상 아님)
 ```
 
 - **페이지 진입점은 `index.html`.** (구 파일명 `billit 소개 홈페이지.html`에서 변경됨)
@@ -71,11 +76,13 @@ npm run dev          # → http://localhost:3000 (저장 시 자동 리로드)
 
 ---
 
-## 미완성 플레이스홀더 (배포 전 채워야 함)
+## 배포 / SEO
 
-- 요금 정책: faq.html "준비 중"
-- 사업자 정보: footer 대표·사업자등록번호·주소·문의 전부 "준비 중"
-- 이용약관 / 개인정보처리방침: 빈 `#` 링크
+- **배포 도메인**: `about.billit.co.kr` (서브도메인). apex `billit.co.kr`은 서비스 웹앱 전용, `www`는 apex로 리디렉션됨.
+  - 도메인을 바꾸면 전 페이지의 `og:url`·`canonical`·`og:image` 절대경로를 함께 수정해야 한다.
+- **메타/OG**: 메인 4페이지에 description·OG·Twitter Card·canonical·theme-color(`#00C896`) 적용. OG 공유 이미지는 `assets/og-image.png`(1200×630, 로고 기반 카드).
+- **약관/개인정보**: `terms.html`·`privacy.html`은 `robots noindex`(법률문서, 검색 제외).
+- **콘텐츠 사실관계**: 요금=빌릿패키지 시간당 500원(2·4시간 단위), 동시 대여 가능(백엔드 제한 없음), **회원가입은 필요**하되 "복잡한 가입 절차"는 없음("회원가입 불필요"로 쓰지 말 것). 사업자 정보·요금·약관 모두 반영 완료 — 더 이상 "준비 중" 플레이스홀더 없음.
 
 ---
 
