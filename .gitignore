@@ -1,0 +1,26 @@
+# ===== WSL2 / Windows 아티팩트 =====
+# Windows에서 다운로드한 파일을 WSL로 복사할 때 생기는 ADS 잔여 파일
+*:Zone.Identifier
+*Zone.Identifier
+
+# ===== OS 메타데이터 =====
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# ===== 에디터 =====
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# ===== Node / 의존성 =====
+# live-server 등 devDependency 설치 폴더 (package-lock.json은 커밋)
+node_modules/
+
+# ===== 로그 / 임시 =====
+*.log
+.cache/
+tmp/
+screenshots/
