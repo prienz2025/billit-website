@@ -1,6 +1,6 @@
 # billit-website — CLAUDE.md
 
-빌릿(billit) **소개용 정적 마케팅 홈페이지**. 프렌즈(PRIENZ)가 운영하는 캠퍼스 무인(QR) 대여 서비스의 랜딩 사이트다.
+빌릿(billit) **소개용 정적 마케팅 홈페이지**. 캠퍼스 무인(QR) 대여 서비스의 랜딩 사이트다.
 
 > ⚠️ 루트 `billit/`의 실서비스 플랫폼(backend / frontend / admin, P2P 렌탈)과는 **별개**다. 이 디렉토리는 그 서비스를 알리는 랜딩 페이지만 담는다. 실제 대여 진입점은 외부 링크 `https://billit.co.kr`.
 
@@ -31,8 +31,8 @@ billit-website/
 ├── how.html            # 이용 방법 상세
 ├── stations.html       # 스테이션 거점 안내
 ├── faq.html            # 요금·FAQ
-├── terms.html          # 이용약관 (billit-frontend에서 가져옴, noindex)
-├── privacy.html        # 개인정보처리방침 (noindex)
+├── terms.html          # → https://billit.co.kr/docs/terms.html 로 리다이렉트 (정본은 billit-frontend, noindex)
+├── privacy.html        # → https://billit.co.kr/docs/privacy.html 로 리다이렉트 (정본은 billit-frontend, noindex)
 ├── favicon.ico / favicon.svg   # 파비콘 (billit-frontend에서 가져옴, 데스크탑/웹 전용)
 ├── assets/
 │   ├── billit-tokens.css   # 디자인 토큰 단일 소스 (색/타이포/간격/그림자) — DESIGN.md 참조
